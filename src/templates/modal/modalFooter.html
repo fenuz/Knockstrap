@@ -1,4 +1,9 @@
-<!-- ko if: $data.action -->
-<a href="#" class="btn btn-primary" data-bind="click: action, html: primaryLabel"></a>
+<!-- ko if: $data.primaryAction -->
+    <a href="#" class="btn" role="button" data-bind="click: function() { primaryAction()($parent) }, html: primaryLabel, css: primaryCss"></a>
 <!-- /ko -->
-<a href="#" class="btn btn-default" data-bind="html: closeLabel" data-dismiss="modal"></a>
+<!-- ko if: $data.secondaryAction -->
+    <a href="#" class="btn" role="button" data-bind="click: function() { secondaryAction()($parent) }, html: secondaryLabel, css: secondaryCss"></a>
+<!-- /ko -->
+<!-- ko if: $data.closeAction -->
+    <a href="#" class="btn" role="button" data-bind="click: function() { closeAction()($parent) }, html: closeLabel, css: closeCss"></a>
+<!-- /ko -->

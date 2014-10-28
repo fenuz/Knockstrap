@@ -111,7 +111,7 @@
             value: {
                 header: { data: { label: 'test' } },
                 body: { name: 'test-template' },
-                footer: { data: { action: function () { }, primaryLabel: 'primary', closeLabel: 'close' } }
+                footer: { data: { primaryAction: function () { }, primaryLabel: 'primary', closeLabel: 'close' } }
             }
         };
 
@@ -127,7 +127,7 @@
             value: {
                 header: { data: { label: 'test' } },
                 body: { name: 'test-template' },
-                footer: { data: { action: spy  } }
+                footer: { data: { primaryAction: ko.observable(spy), primaryLabel: 'spy'  } }
             }
         };
 
